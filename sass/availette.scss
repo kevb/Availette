@@ -1,0 +1,117 @@
+.availette.calendar {
+    
+    font-size: 14px;
+    
+    i {
+        background-image: url('arrows.png');
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 14px;
+        margin-top: 1px;
+        display: inline-block;
+        
+        
+        &.icon-arrow-left {
+            background-position: 0px 1px;
+        }
+        
+        &.icon-arrow-right {
+            background-position: -23px 1px;
+        }
+    }
+    
+    >header{
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+        
+        a.month {
+            cursor: pointer;
+            margin: 0;
+            color: #00A;
+            
+            &.next {
+                float: right;
+                margin-right: 6px;
+            }
+    
+            &.previous {
+                float: left;
+                margin-left: 13px;
+            }
+        }
+    }
+    
+    >ul {
+        margin: 0 3%;
+        padding: 0;
+        width: 100%;
+        
+        >li {
+            list-style: none;
+            margin: 0 0 2% 0;
+            padding: 0;
+            width: 14%;
+            float:left;
+            text-align: center;
+        }
+        
+        &.days.body {
+            box-sizing: border-box;
+            padding-left: 1%;
+            
+            >li.busy {
+                background-color: #FFDFDF;
+                position: relative;
+                
+                &:before {
+                    content: "\2571";
+                    display: block;
+                    color: #E77;
+                    font-size: 1.8em;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    opacity: 0.2;
+                }
+            }
+            
+            >li.free {
+                background-color: #e8f8e8;
+            }
+            
+            @for $i from 1 through 6 {
+                >li.offset#{$i} {
+                    margin-left: $i * 14%
+                }
+            }
+        }
+    }
+}
+
+/* Clearfix */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
