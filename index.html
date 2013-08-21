@@ -31,14 +31,14 @@
         <h3>
 <a name="availette" class="anchor" href="#availette"><span class="octicon octicon-link"></span></a>Availette</h3>
 
-<p>Availette is a simple HTML5 / JQuery plugin for displaying your availability in a calendar. You can specify a google calendar URL from which to take your availability. Availette is perfect for displaying your availability on your website, as a freelancer or a business.</p>
+<p>Availette is a simple HTML5 / JQuery plugin for displaying your availability in a calendar, using a public google calendar URL from which to take your (in)availability. Availette is perfect for freelancers and small businesses to show when they are available.</p>
 
 <h3>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
 
-<p>For the most basic usage, include <a href="http://momentjs.com/">momentJS</a>, availette.js and availette.css in your HTML. You may also require both momentJS and Availette as AMD modules.</p>
+<p>For the most basic usage, include <a href="http://momentjs.com/">moment.js</a>, availette.js and availette.css in your HTML. You may also require both momentJS and Availette as AMD modules, e.g. with requireJS.</p>
 
-<p>To add the Availette calendar to the page, give it a target like so:</p>
+<p>To add the Availette calendar to the page, create a placeholder div for the calendar then give it to Availette as a target like so:</p>
 
 <pre><code>opts = {googleCalendarUrl: 'http://'};
 $('#targetdiv').availette(opts);
